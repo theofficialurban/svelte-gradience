@@ -57,8 +57,5 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module",
-	"dependencies": {
-		"@theofficialurban/svelte-gradience": "^1.0.0"
-	}
+	"type": "module"
 }
