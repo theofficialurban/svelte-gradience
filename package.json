@@ -1,6 +1,6 @@
 {
 	"name": "@theofficialurban/svelte-gradience",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -12,6 +12,9 @@
 		"test": "vitest",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write ."
+	},
+	"dependencies": {
+		"d3-interpolate": "^3.0.1"
 	},
 	"exports": {
 		".": {
