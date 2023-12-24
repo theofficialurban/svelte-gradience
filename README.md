@@ -2,6 +2,36 @@
 
 A very thin wrapper for beautiful gradient coloring made using `d3-interpolate`
 
+## **New** Gradience Component
+
+### Props
+
+- `element?` - _div_ or _span_
+- `colors` - An array of color pairs, [ [color1, color2], ... ]
+- `duration?` - Duration of the color loop , default `1000`
+- `easing?` - An easing function, default `linear`
+- `interpolate?` - An interpolate function, see below for interpolate function type
+  - The default interpolater being used is from `d3-interpolate` and it is the `interpolateRgbBasis()` function
+
+```ts
+type InterpolateFunction = (a: string, b: string) => (t: number) => string;
+```
+
+### Example
+
+```html
+<script lang='ts'>
+	import {Gradient} from '@theofficialurban/svelte-gradience'
+</script>
+<!-- Using Tailwind , Variable can be accessed -->
+<!-- Color is automatically provided as variables -->
+<!-- Pair #1 = --one | Pair #2 = --two etc -->
+<Gradient class={`bg-[var(--one)]`} colors={[ ["red", "blue"] ]} let:colors>
+	Hello World!
+</Gradient>
+
+```
+
 ## `class Gradience`
 
 The Gradience Class allows you to create beautiful Gradients and interpolate colors easily

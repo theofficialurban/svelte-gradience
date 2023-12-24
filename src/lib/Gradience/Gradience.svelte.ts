@@ -81,7 +81,7 @@ export class Gradience {
 	 * @returns The colors as CSS variable strings "--one: color1;"
 	 */
 	asVariables = () => {
-		return derived<Tweened<string>[], string[]>(
+		return derived<Tweened<string>[], string>(
 			this.#tweens,
 			([...vals]: string[], set: SetFn<string>) => {
 				let s = '';
